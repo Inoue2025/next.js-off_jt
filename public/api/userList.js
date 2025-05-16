@@ -5,7 +5,7 @@ document.addEventListener("DOMContentLoaded", function () {
 	const loading = document.getElementById("loading");
 
 	// リンクの内容を取得する
-	fetch("https://jsonplaceholder.typicode.com/users1")
+	fetch("https://jsonplaceholder.typicode.com/users")
 		.then(function (response) {
 			return response.json();
 		})
@@ -26,6 +26,5 @@ document.addEventListener("DOMContentLoaded", function () {
 			console.error("通信エラー:", error);
 			const errorMessage = document.getElementById("errorMessage");
 			errorMessage.textContent = "データの取得に失敗しました";
-			// alert("データの取得に失敗しました");
 		});
 });
