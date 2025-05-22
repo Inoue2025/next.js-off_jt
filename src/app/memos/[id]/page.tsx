@@ -20,7 +20,6 @@ export default function detailPage({ params }: Props) {
 			published: "2003年",
 			summary: "犯罪加害者の弟として生きる青年の苦悩と希望を描く作品",
 		},
-
 		{
 			id: "3",
 			title: "架空犯",
@@ -30,10 +29,7 @@ export default function detailPage({ params }: Props) {
 		},
 	];
 
-	const memo = memos.find(function (memo) {
-		return memo.id === id;
-	});
-
+	const memo = memos.find((memo) => memo.id === id);
 	return (
 		<main>
 			<h1>あらすじ</h1>

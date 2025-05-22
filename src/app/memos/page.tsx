@@ -10,7 +10,7 @@ export default function listPage() {
 		<main>
 			<h1>タイトル一覧</h1>
 			<ul>
-				{memos.map(function (memo) {
+				{memos.map((memo) => {
 					return (
 						<li key={memo.id}>
 							<Link href={`/memos/${memo.id}`}>{memo.title}</Link>
