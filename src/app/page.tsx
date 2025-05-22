@@ -3,7 +3,6 @@ import { LinkButton } from "./components/LinkButton";
 export default function Page() {
 	const now = new Date();
 	const dateString = now.toLocaleDateString("ja-JP");
-	console.log(dateString);
 
 	return (
 		<div className="text-center mt-60 text-3xl">
