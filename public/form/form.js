@@ -30,13 +30,4 @@ form.addEventListener("submit", (event) => {
 	} else {
 		document.getElementById("ageError").style.display = "none";
 	}
-	//フォームデータを格納するオブジェクトを定義
-	const formDate = {
-		name: document.getElementById("username").value,
-		age: document.getElementById("age").value,
-		job: document.getElementById("job").value,
-		bio: document.getElementById("bio").value,
-	};
-	//バリデーションチェックがない場合にコンソールに出力
-	console.log(JSON.stringify(formDate, null, 2));
 });

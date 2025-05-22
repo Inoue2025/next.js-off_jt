@@ -1,16 +1,13 @@
 // HTML読み込み完了後の動き
-document.addEventListener("DOMContentLoaded", function () {
+document.addEventListener("DOMContentLoaded", () => {
 	const error = document.getElementById("errorMessage");
 	const userlist = document.getElementById("userList");
 	const loading = document.getElementById("loading");
 
 	// リンクの内容を取得する
 	fetch("https://jsonplaceholder.typicode.com/users")
-		.then(function (response) {
-			return response.json();
-		})
-		.then(function (users) {
-			console.log(users);
+		.then((response) => response.json())
+		.then((users) => {
 			loading.style.display = "none";
 
 			// リスト作成
@@ -22,8 +19,7 @@ document.addEventListener("DOMContentLoaded", function () {
 		})
 
 		// エラーの時
-		.catch(function (error) {
-			console.error("通信エラー:", error);
+		.catch((error) => {
 			const errorMessage = document.getElementById("errorMessage");
 			errorMessage.textContent = "データの取得に失敗しました";
 		});
