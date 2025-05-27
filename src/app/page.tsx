@@ -1,9 +1,16 @@
-export default function Home() {
-	const name: string = "Yuki";
+import { LinkButton } from "./components/LinkButton";
+
+export default function Page() {
+	const now = new Date();
+	const dateString = now.toLocaleDateString("ja-JP");
 
 	return (
 		<main>
-			<h1>こんにちは、{name}さん</h1>
+			<div className="text-center mt-60 text-3xl">
+				<h1>きょうは{dateString}です</h1>
+				<p>やあ！きょうも一日頑張ろうね！！</p>
+				<LinkButton />
+			</div>
 		</main>
 	);
 }
