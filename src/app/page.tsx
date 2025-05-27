@@ -1,6 +1,6 @@
 import Link from "next/link";
 
-export default function topPage() {
+export default function TopPage() {
   return (
     <main>
       <h1>ようこそ東野圭吾の世界へ</h1>
